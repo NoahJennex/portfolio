@@ -1,0 +1,28 @@
+$elementHeight: 350px;
+$elementPadding: 20px;
+$elementColor: white;
+$elementTextColor: rgb(75, 75, 75);
+
+$marginTop: 40px;
+$borderRadius: 25px;
+
+// $testingBorder: 1px solid green;
+$testingBorder: none;
+// $testingBorderAlt: 1px solid red;
+$testingBorderAlt: none;
+// $testingBorderSections: 1px solid blue;
+$testingBorderSections: none;
+
+$border: 1px solid black;
+
+
+$shadow:0px 0px 8px 8px rgba(0, 0, 0, 0.075);
+
+// $navbarColor: white;
+$navbarColor: rgb(50, 50, 50);
+// $navbarColor: $elementTextColor;
+$navbarTextColor: white;
+// $navbarTextColor: rgb(75, 75, 75);
+
+$dropDownColor: white;
+$dropDownTextColor: $elementTextColor;

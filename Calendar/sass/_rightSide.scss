@@ -1,0 +1,58 @@
+#right-calendar{
+    width: 80%;
+    margin: auto;
+
+    table{
+        width: 100%;
+
+        th{
+            height: 2em;
+            font-size: 1.75em;
+            text-align: left;
+        }
+
+        td{
+            border: 1px solid $borderColor;
+            height: 5em;
+            padding: 0;
+            display: block;
+        }
+
+        .tdTitle{
+            background-color: $borderColor;
+            font-weight: bold;
+            padding: 2px;
+        }
+    }
+}
+
+#item-right{
+    margin-top: 2em;
+    float: left;
+    width: 40%;
+    display: block;
+
+}
+
+.elements{
+    width: 100%;
+    color: $textColor;
+    background-color: $elementColor;
+    padding: 5px;
+}
+
+input{
+    border: 1px solid transparent;
+    border-bottom: 2px solid $navColor;
+    outline: none;
+}
+
+#divContain{
+    width: 100%;
+    overflow:auto;
+    height: 42em;
+
+    tr{
+        width: 100%;
+    }
+}

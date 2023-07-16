@@ -1,0 +1,53 @@
+.deck {
+  position: relative;
+  width: 100px;
+  height: 145px;
+}
+
+.cardImg {
+  width: 100px;
+  -webkit-transition: all 0.75s linear;
+  transition: all 0.75s linear;
+}
+
+.cardHand {
+  position: absolute;
+  border: solid 1px transparent;
+}
+
+.deckHand {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 4;
+}
+
+.cardHoverTrue:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  bottom: 10px;
+}
+
+.cardHoverFalse:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  bottom: 0px;
+}
+
+.cardInDeck {
+  position: absolute;
+}
+
+.disable-select {
+  user-select: none;
+  /* supported by Chrome and Opera */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+}
+/*# sourceMappingURL=style.css.map */

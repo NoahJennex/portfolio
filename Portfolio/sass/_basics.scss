@@ -1,0 +1,72 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Sora";
+    // margin: 0px;
+
+    background-image: url('/Portfolio/backgrounds/background4.JPG');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    overflow:hidden;
+    height: fit-content;
+    // scroll-behavior: smooth;
+}
+
+h1{
+    font-size: 60px;
+    color:$elementTextColor;
+    margin: 0;
+}
+
+h2{
+  font-size: 45px;
+  color:$elementTextColor;
+  margin: 0;
+
+  background-color: lightgray;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 40%;
+  border-radius: 0px 25px 0px 25px;
+}
+
+h3{
+  font-size: 35px;
+  color:$elementTextColor;
+  margin: 0;
+  // margin-left: -20px;
+
+  background-color: rgb(241, 241, 241);
+  margin-top: 20px;
+  // margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-width: 30%;
+  max-width: fit-content;
+  border-radius: 0px 25px 25px 0px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgb(241, 241, 241); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(185, 185, 185); 
+    border-radius: 25px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(125, 125, 125); 
+  }

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head><title>Cool Calc</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+#display
+{
+	background-color: black;
+	color: #53f442;
+	/*font-face: courier;*/
+	width: 300px;
+	height: 35px;
+	margin-bottom: 10px;
+}
+
+
+</style>
+</head>
+<body>
+
+<div id="display"></div>
+<div class="btn btn-primary" id="num1">1</div>
+<div class="btn btn-primary" id="num2">2</div>
+<div class="btn btn-primary" id="num3">3</div>
+<div class="btn btn-primary" id="num4">4</div>
+<div class="btn btn-primary" id="num5">5</div>
+<div class="btn btn-primary" id="num6">6</div>
+<div class="btn btn-primary" id="num7">7</div>
+<div class="btn btn-primary" id="num8">8</div>
+<div class="btn btn-primary" id="num9">9</div>
+<div class="btn btn-primary" id="num0">0</div>
+<div class="btn btn-primary" id="plus">+</div>
+<div class="btn btn-primary" id="sub">-</div>
+<div class="btn btn-primary" id="division">÷</div>
+<div class="btn btn-primary" id="mult">x</div>
+<div class="btn btn-primary" id="equals">=</div>
+<div class="btn btn-primary" id="clear">clr</div>
+
+<script>
+let currentCalc = "";
+let num_btn1 = document.querySelector("#num1");
+let num_btn2 = document.querySelector("#num2");
+let num_btn3 = document.querySelector("#num3");
+let num_btn4 = document.querySelector("#num4");
+let num_btn5 = document.querySelector("#num5");
+let num_btn6 = document.querySelector("#num6");
+let num_btn7 = document.querySelector("#num7");
+let num_btn8 = document.querySelector("#num8");
+let num_btn9 = document.querySelector("#num9");
+let num_btn0 = document.querySelector("#num0");
+let plus_btn = document.querySelector("#plus");
+let sub_btn = document.querySelector("#sub");
+let division_btn = document.querySelector("#division");
+let mult_btn = document.querySelector("#mult");
+let equals_btn = document.querySelector("#equals");
+let clear_btn = document.querySelector("#clear");
+
+//num buttons
+	num_btn1.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+	num_btn2.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+	num_btn3.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+	num_btn4.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+	num_btn5.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+	num_btn6.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+	num_btn7.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+	num_btn8.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+	num_btn9.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+	num_btn0.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+//calculations
+	plus_btn.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		console.log(currentCalc);
+	});
+
+	sub_btn.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		console.log(currentCalc);
+	});
+
+	division_btn.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + "/";
+	});
+
+	mult_btn.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + "*";
+	});
+
+	equals_btn.addEventListener("click",
+	function (e)
+	{
+		let disp = document.querySelector("#display");
+		disp.textContent = eval(currentCalc);
+		currentCalc = eval(currentCalc);
+	});
+
+	clear_btn.addEventListener("click",
+	function (e)
+	{
+		currentCalc = "";
+		let disp = document.querySelector("#display");
+		disp.textContent = eval(currentCalc);
+	});
+
+	function makeDisplay(strCurrentCalc){
+		strCurrentCalc = strCurrentCalc.replace("*", "x");
+		strCurrentCalc = strCurrentCalc.replace("/", "÷");
+		return strCurrentCalc;
+	}
+
+
+
+</script>
+</html>

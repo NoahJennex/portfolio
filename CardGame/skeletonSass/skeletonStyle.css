@@ -1,0 +1,102 @@
+body {
+  background-color: #212124;
+}
+
+#grid-item-2 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  z-index: 5;
+}
+
+#grid-item-4 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  z-index: 5;
+}
+
+#grid-item-6 {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  z-index: 5;
+}
+
+#grid-item-8 {
+  z-index: 5;
+}
+
+#center {
+  height: 145px;
+  width: 230px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#deck1:hover, #pile1:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.handDiv {
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#grid-item-center {
+  -webkit-transition: all 0.75s linear;
+  transition: all 0.75s linear;
+}
+
+#tableInner {
+  -webkit-transition: all 0.75s linear;
+  transition: all 0.75s linear;
+}
+
+#tableOuter {
+  overflow: hidden;
+}
+
+#deck1:hover, #pile1:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.grid-container-center {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+.grid-container-board {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -webkit-column-gap: 0;
+          column-gap: 0;
+  row-gap: 0;
+  position: relative;
+  width: 70%;
+  max-width: 900px;
+  max-height: 900px;
+  margin: auto;
+}
+
+.grid-item-board {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  max-height: 300px;
+  height: 0;
+  max-width: 300px;
+  display: block;
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+}
+/*# sourceMappingURL=skeletonStyle.css.map */

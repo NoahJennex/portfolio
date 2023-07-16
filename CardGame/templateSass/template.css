@@ -1,0 +1,242 @@
+body {
+  background-color: #f8f9fa;
+}
+
+#grid-item-2 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  z-index: 5;
+}
+
+#grid-item-4 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  z-index: 5;
+}
+
+#grid-item-6 {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  z-index: 5;
+}
+
+#grid-item-8 {
+  z-index: 5;
+}
+
+#grid-item-1 {
+  z-index: 4;
+}
+
+#grid-item-3 {
+  z-index: 4;
+}
+
+#grid-item-7 {
+  z-index: 4;
+}
+
+#grid-item-9 {
+  z-index: 4;
+}
+
+#center {
+  height: 145px;
+  width: 230px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#deck1:hover, #pile1:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.handDiv {
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#grid-item-center {
+  -webkit-transition: all 0.75s linear;
+  transition: all 0.75s linear;
+  z-index: 6;
+}
+
+#tableInner {
+  -webkit-transition: all 0.75s linear;
+  transition: all 0.75s linear;
+}
+
+#tableOuter {
+  overflow: hidden;
+}
+
+#deck1:hover, #pile1:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.grid-container-center {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+.grid-container-board {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -webkit-column-gap: 0;
+          column-gap: 0;
+  row-gap: 0;
+  position: relative;
+  width: 70%;
+  max-width: 900px;
+  max-height: 900px;
+  margin: auto;
+}
+
+.grid-item-board {
+  max-height: 300px;
+  height: 0;
+  max-width: 300px;
+  display: block;
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.checkbox {
+  margin: 0;
+  margin-right: 3px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + label {
+  background-color: #81acd4;
+  opacity: 100%;
+}
+
+label {
+  vertical-align: middle;
+  padding: 5px;
+  border-radius: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #81acd4;
+  font-size: large;
+  opacity: 40%;
+}
+
+label:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background-color: #a6c6d5;
+}
+
+.headerDiv {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #383838;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  font-size: large;
+}
+
+.button {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px;
+  line-height: fit-content;
+  border: transparent;
+  border-radius: 5px;
+}
+
+.button:hover {
+  opacity: 60%;
+}
+
+.grid-container-playerCheckbox {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -webkit-column-gap: auto;
+          column-gap: auto;
+}
+
+.menu {
+  background-color: #181818;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: auto;
+}
+
+.nameDiv {
+  position: relative;
+  z-index: 6;
+  background-color: #181818;
+  border-radius: 25px;
+  margin: auto;
+  top: -15px;
+  padding: 4px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 100px;
+  color: white;
+  text-align: center;
+}
+
+label {
+  vertical-align: middle;
+  padding: 5px;
+  border-radius: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #81acd4;
+  font-size: large;
+}
+
+label:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background-color: #a6c6d5;
+}
+/*# sourceMappingURL=template.css.map */

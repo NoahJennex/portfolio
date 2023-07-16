@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head><title>Cool Calc</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+#display
+{
+	background-color: gray;
+	/* color: #53f442; */
+	/*font-face: courier;*/
+	color: white;
+	width: 100%;
+	min-width: 300px;
+	min-height: 35px;
+	max-width: 500px;
+	max-height: 70px;
+	/* margin-bottom: 10px; */
+}
+
+#grid
+{
+	display:grid;
+	width: 100%;
+	min-width: 300px;
+	max-width: 500px;
+    grid-template-rows:20% 20% 20% 20% 20%;
+    grid-template-columns:25% 25% 25% 25%;
+	background-color: lightgray; 
+
+}
+
+[id^=num], #per {
+	background-color: rgba(255, 255, 255, 0);
+	border-color: transparent;
+	color: gray;
+}
+
+/* #per { 
+	background-color: gray;
+	border-color: transparent;
+}*/
+
+#grid > div {
+	margin: 1%;
+	/* width: 50%; */
+}
+
+
+#num7 {
+	grid-row-start:2;
+    grid-row-end:2;
+    grid-column-start:1;
+	grid-column-end:1;
+}
+#num8 {
+	grid-row-start:2;
+    grid-row-end:2;
+    grid-column-start:2;
+	grid-column-end:2;
+}
+#num9 {
+	grid-row-start:2;
+    grid-row-end:2;
+    grid-column-start:3;
+	grid-column-end:3;
+}
+#num4 {
+	grid-row-start:3;
+    grid-row-end:3;
+    grid-column-start:1;
+	grid-column-end:1;
+}
+#num5 {
+	grid-row-start:3;
+    grid-row-end:3;
+    grid-column-start:2;
+	grid-column-end:2;
+}
+#num6 {
+	grid-row-start:3;
+    grid-row-end:3;
+    grid-column-start:3;
+	grid-column-end:3;
+}
+#num1 {
+	grid-row-start:4;
+    grid-row-end:4;
+    grid-column-start:1;
+	grid-column-end:1;
+}
+#num2 {
+	grid-row-start:4;
+    grid-row-end:4;
+    grid-column-start:2;
+	grid-column-end:2;
+}
+#num3 {
+	grid-row-start:4;
+    grid-row-end:4;
+    grid-column-start:3;
+	grid-column-end:3;
+}
+#num0 {
+	grid-row-start:5;
+    grid-row-end:5;
+    grid-column-start:2;
+	grid-column-end:2;
+} 
+
+#per {
+	grid-row-start:5;
+    grid-row-end:5;
+    grid-column-start:3;
+	grid-column-end:3;
+} 
+#clear {
+	grid-row-start:1;
+    grid-row-end:1;
+    grid-column-start:2;
+	grid-column-end:2;
+}
+#back {
+	grid-row-start:1;
+    grid-row-end:1;
+    grid-column-start:1;
+	grid-column-end:1;
+}
+#division {
+	grid-row-start:1;
+    grid-row-end:1;
+    grid-column-start:4;
+	grid-column-end:4;
+}
+#mult {
+	grid-row-start:2;
+    grid-row-end:2;
+    grid-column-start:4;
+	grid-column-end:4;
+}
+#sub {
+	grid-row-start:3;
+    grid-row-end:3;
+    grid-column-start:4;
+	grid-column-end:4;
+}
+#plus {
+	grid-row-start:4;
+    grid-row-end:4;
+    grid-column-start:4;
+	grid-column-end:4;
+}
+#equals {
+	grid-row-start:5;
+    grid-row-end:5;
+    grid-column-start:4;
+	grid-column-end:4;
+}
+
+
+</style>
+</head>
+<body>
+
+<div id="display"></div>
+<div id="grid">
+	<div class="btn btn-primary" id="num1">1</div>
+	<div class="btn btn-primary" id="num2">2</div>
+	<div class="btn btn-primary" id="num3">3</div>
+	<div class="btn btn-primary" id="num4">4</div>
+	<div class="btn btn-primary" id="num5">5</div>
+	<div class="btn btn-primary" id="num6">6</div>
+	<div class="btn btn-primary" id="num7">7</div>
+	<div class="btn btn-primary" id="num8">8</div>
+	<div class="btn btn-primary" id="num9">9</div>
+	<div class="btn btn-primary" id="num0">0</div>
+	<div class="btn btn-primary" id="per">.</div>
+	<div class="btn btn-primary" id="plus">+</div>
+	<div class="btn btn-primary" id="sub">-</div>
+	<div class="btn btn-primary" id="division">÷</div>
+	<div class="btn btn-primary" id="mult">x</div>
+	<div class="btn btn-primary" id="equals">=</div>
+	<div class="btn btn-primary" id="clear">clr</div>
+	<div class="btn btn-primary" id="back">⌫</div>
+</div>
+
+<script>
+let currentCalc = "";
+let num_btn1 = document.querySelector("#num1");
+let num_btn2 = document.querySelector("#num2");
+let num_btn3 = document.querySelector("#num3");
+let num_btn4 = document.querySelector("#num4");
+let num_btn5 = document.querySelector("#num5");
+let num_btn6 = document.querySelector("#num6");
+let num_btn7 = document.querySelector("#num7");
+let num_btn8 = document.querySelector("#num8");
+let num_btn9 = document.querySelector("#num9");
+let num_btn0 = document.querySelector("#num0");
+let per_btn = document.querySelector("#per");
+let plus_btn = document.querySelector("#plus");
+let sub_btn = document.querySelector("#sub");
+let division_btn = document.querySelector("#division");
+let mult_btn = document.querySelector("#mult");
+let equals_btn = document.querySelector("#equals");
+let clear_btn = document.querySelector("#clear");
+let back_btn = document.querySelector("#back");
+
+//num buttons
+	num_btn1.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+	num_btn2.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+	num_btn3.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+	num_btn4.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+	num_btn5.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+	num_btn6.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+	num_btn7.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+	num_btn8.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+	num_btn9.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+	num_btn0.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+//calculations
+	per_btn.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+	
+	plus_btn.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+	sub_btn.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+	division_btn.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + "/";
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+	mult_btn.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + "*";
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+	equals_btn.addEventListener("click",
+	function (e)
+	{
+		let disp = document.querySelector("#display");
+		disp.textContent = eval(currentCalc);
+		currentCalc = eval(currentCalc);
+	});
+
+	clear_btn.addEventListener("click",
+	function (e)
+	{
+		currentCalc = "";
+		let disp = document.querySelector("#display");
+		disp.textContent = eval(currentCalc);
+	});
+
+	back_btn.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc.slice(0, currentCalc.length-1);
+		let disp = document.querySelector("#display");
+		disp.textContent = makeDisplay(currentCalc);
+	});
+
+	function makeDisplay(strCurrentCalc){
+		strCurrentCalc = strCurrentCalc.replace("*", "x");
+		strCurrentCalc = strCurrentCalc.replace("/", "÷");
+		return strCurrentCalc;
+	}
+
+
+
+</script>
+</html>

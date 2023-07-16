@@ -1,0 +1,22 @@
+.navbar{
+    background-color: $navColor;
+    width: 100%;
+    padding: 0.5em;
+    color: $textColor;
+    text-align: center;
+    font-size: 1.75em;
+    overflow: visible;
+}
+
+.fc-button{
+    background-color: $navColor;
+    border-color: $navColor;
+    color: $textColor;
+    border-radius: 0.25em;
+    border-style: none;
+    font-weight: 400;
+    padding: 0.4em 0.65em;
+    font-size: 0.65em;
+    line-height: 1.5;
+}
+

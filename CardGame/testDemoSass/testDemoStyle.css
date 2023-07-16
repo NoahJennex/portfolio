@@ -1,0 +1,60 @@
+#deck:hover, #pile:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+#pile {
+  position: relative;
+  width: 100px;
+  height: 145px;
+}
+
+#pile:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+#hand1, #hand2, #hand3, #hand4 {
+  border: 1px solid black;
+}
+
+#tableCenter {
+  position: relative;
+  border: 1px solid green;
+  width: 230px;
+  height: 145px;
+  display: -ms-grid;
+  display: grid;
+  background-color: black;
+}
+
+#moveHandBtn {
+  margin: 5px;
+}
+
+#moveHandBtn:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+.grid-item1 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 1;
+  margin: auto;
+}
+
+.grid-item2 {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 2;
+  margin: auto;
+}
+/*# sourceMappingURL=testDemoStyle.css.map */

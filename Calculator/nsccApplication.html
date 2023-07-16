@@ -1,0 +1,480 @@
+<html>
+    <head><title>NSCC Application</title></head>
+    
+    <style>
+        body{
+            width: 960px;
+            margin: auto;
+            border: 1px solid #333;
+            border-radius: 1px;
+            padding: 1%;
+        }
+        h2{
+            background-color: lightskyblue;
+        }
+        h4{
+           background-color: lightgray; 
+        }
+        input{
+            border: 0.5px solid #333; 
+        }
+
+        input[type=email]{
+            -webkit-appearance: none;
+
+            width: 100%;
+            border: 0.5px solid #333;
+            margin: 0; 
+
+            font-family: inherit;
+            font-size: 90%;
+
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        td{
+            display: block;
+        }
+
+        input:invalid{
+            border-color: #900;
+            background-color: #FDD;
+        }
+
+        input:focus:invalid {
+            outline: none;
+        }
+
+        .error {
+            width  : 100%;
+            padding: 0;
+ 
+            font-size: 80%;
+            color: white;
+            background-color: #900;
+            border-radius: 0 0 5px 5px;
+ 
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .error.active {
+            padding: 0.3em;
+        }
+
+        #grid{
+            display:grid;
+            grid-template-rows:100%;
+            grid-template-columns:auto;
+            width: fit-content;
+        }
+        #grid > #col1R1{
+            grid-row-start:1;
+            grid-row-end:1;
+            grid-column-start:1;
+            grid-column-end:1;
+            height: fit-content;
+            width: fit-content;
+        }
+        #grid > #col1R2{
+            grid-row-start:2;
+            grid-row-end:2;
+            grid-column-start:1;
+            grid-column-end:1;
+            height: fit-content;
+            width: fit-content;
+        }
+        #grid > #col2R1{
+            grid-row-start:1;
+            grid-row-end:1;
+            grid-column-start:2;
+            grid-column-end:2;
+            height: fit-content;
+            width: fit-content;
+            margin-left: 10px;
+        }
+        #grid > #col2R2{
+            grid-row-start:2;
+            grid-row-end:2;
+            grid-column-start:2;
+            grid-column-end:2;
+            height: fit-content;
+            width: fit-content;
+            margin-left: 10px;
+        }
+        #grid > #col3R2{
+            grid-row-start:1;
+            grid-row-end:1;
+            grid-column-start:3;
+            grid-column-end:3;
+            height: fit-content;
+            width: fit-content;
+        }
+
+        #gridFee{
+            display:grid;
+            grid-template-rows:100%;
+            grid-template-columns:auto;
+            width: fit-content;
+        }
+        #gridFee > #col1R1{
+            grid-row-start:1;
+            grid-row-end:1;
+            grid-column-start:1;
+            grid-column-end:1;
+            height: fit-content;
+            width: fit-content;
+        }
+        #gridFee > #col2R1{
+            grid-row-start:1;
+            grid-row-end:1;
+            grid-column-start:2;
+            grid-column-end:2;
+            height: fit-content;
+            width: fit-content;
+            margin-left: 10px;
+        }
+        #gridFee > #col3R1{
+            grid-row-start:1;
+            grid-row-end:1;
+            grid-column-start:3;
+            grid-column-end:3;
+            height: fit-content;
+            width: fit-content;
+            margin-left: 10px;
+        }
+        #gridFee > #col4R1{
+            grid-row-start:1;
+            grid-row-end:1;
+            grid-column-start:4;
+            grid-column-end:4;
+            height: fit-content;
+            width: fit-content;
+            margin-left: 10px;
+        }
+
+    </style>
+
+    <body>
+        <h2>Nova Scotia Community College Program Application</h2>
+        <h4>Personal Information</h4>
+        <table>
+            <tbody>
+                <tr><td>Full Name (first, middle, last)</td><td>
+                    
+                    <input name="fullname" type="text" size=30 maxlength=30 required pattern="[A-Za-z]+">
+                </td></tr>
+                <tr><td>Preferred first name</td><td>
+                    
+                    <input name="pfname" type="text" size=30 maxlength=30 pattern="[A-Za-z]+">
+                </td></tr>
+                <tr><td>Previous last name</td><td>
+                    
+                    <input name="plname" type="text" size=30 maxlength=30 pattern="[A-Za-z]+">
+                </td></tr>
+                <tr><td>Date of birth (mm/dd/yyyy)</td><td>
+                    
+                    <input name="bday" type="date" size=30 required>
+                </td></tr>
+                <tr><td>Gender</td><td>
+                    <input value="M" name="MorF" type="radio" required>M 
+                    <input value="F" name="MorF" type="radio">F 
+                </td></tr>
+                <tr><td>Apartment number</td><td>
+                    
+                    <input name="anum" type="number" min="1">
+                </td></tr>
+                <tr><td>Permanent mailing address (street address, rural route, or P.O. Box)</td><td>
+                    
+                    <input name="pmail" type="text" size=30 maxlength=30 required>
+                </td></tr>
+                <tr><td>City/Town</td><td>
+                    
+                    <input name="city" type="text" size=30 maxlength=30 required pattern="[A-Za-z]+">
+                </td></tr>
+                <tr><td>Province</td><td>
+                    
+                    <input name="prov" type="text" size=30 maxlength=30 required pattern="[A-Za-z]+">
+                </td></tr>
+                <tr><td>Country</td><td>
+                    
+                    <input name="country" type="text" size=30 maxlength=30 required pattern="[A-Za-z]+">
+                </td></tr>
+                <tr><td>Postal code</td><td>
+                    
+                    <input name="Pcode" type="text" size=30 maxlength=30 required>
+                </td></tr>
+                <tr><td>Home telephone</td><td>
+                    
+                    <input name="Hphone" type="tel" size=30 maxlength=30 pattern="[0-9 & - & ].{9,}">
+                </td></tr>
+                <tr><td>Work telephone</td><td>
+                    
+                    <input name="Wphone" type="tel" size=30 maxlength=30 pattern="[0-9 & - & ].{9,}">
+                </td></tr>
+                <tr><td>Cell phone</td><td>
+                    
+                    <input name="Cphone" type="tel" size=30 maxlength=30 required pattern="[0-9 & - & ].{9,}">
+                </td></tr>
+                <tr><td>Email address (We will be corresponding with you via email. Please ensure this address is secure and accessible.)</td><td>
+                    
+                    <input name="e-mail" type=email id="mail" size=30 maxlength=30 required>
+                </td></tr>
+                <tr><td>Student ID number (if you've previously attended NSCC.)</td><td>   
+                    
+                    <input name="Sid" type="text" size=30 maxlength=30>
+                </td></tr>
+            </tbody>
+        </table>
+         
+        <h4>English Language Proficiency</h4>
+        Is English your first language?
+        <br>
+        <input value="Yes" name="language" type="radio" required>Yes 
+        <br>
+        <input value="No" name="language" type="radio">No, my first language is: 
+        
+        <input name="fLanguage" type="text" size=30 maxlength=30 pattern="[A-Za-z]+">
+
+
+        <h4>Citizenship Status</h4>
+        <input value="Ccitizen" name="language" type="checkbox"> Canadian Citizen
+        <br>
+        <input value="PResident" name="language" type="checkbox"> Permanent Resident (Copy of Permanent Resident card required)
+        <br>
+        <input value="Pstatus" name="language" type="checkbox"> Refugee with protected person status
+        <br>
+        <input value="other" name="language" type="checkbox"> Other (Please specify below)
+        <br>
+        
+        <input name="otherBox" type="text" size=30 maxlength=30 >
+
+
+        <h4>Program Choices</h4><p>You can apply for one or two program/campus combinations. Changes or additions to your choices require the submission of a new application and fee. Your application will be considered for the next intake.</p>
+        <div id="grid">
+            <div id="col1R1">Prefered program choice <input name="fullname" type="text" size=30 maxlength=30 required pattern="[A-Za-z]+"></input></div>
+            <div id="col2R1">Location <input name="fullname" type="text" size=30 maxlength=30 required pattern="[A-Za-z]+"></input></div>
+            <div id="col1R2">Second program choice  <input name="fullname" type="text" size=30 maxlength=30 pattern="[A-Za-z]+"></div>
+            <div id="col2R2">Location <input name="fullname" type="text" size=30 maxlength=30 pattern="[A-Za-z]+"></input></div>
+        </div>
+        <br>
+        <h4>Application Fee</h4><p>The non-refundable $25 application fee ($75 international, $0 ALP) must be received in order for your application to be processed. Please do not send cash.</p>
+        <input value="Visa" name="fee" type="radio" checked required>Visa 
+        <input value="Visa" name="fee" type="radio">Mastercard 
+        <input value="Visa" name="fee" type="radio">Discover 
+        <input value="Visa" name="fee" type="radio">American Express 
+        <input value="Visa" name="fee" type="radio">Cheque/Money Order (Payable to NSCC. No post-dated cheques.)
+        <br>
+        <br>
+        <div id="gridFee">
+            <div id="col1R1">
+                Credit card number
+                <br>
+                <input name="fullname" type="number" size=30 maxlength=30 required>
+            </div>
+            <div id="col2R1">
+                Exp. Date (mm/yy)
+                <br>
+                <input name="fullname" type="date" size=30 maxlength=30 required>
+            </div>
+            <div id="col3R1">
+                Name of Cardholder (as it appears on the card)
+                <br>
+                <input name="fullname" type="text" size=30 maxlength=30 required pattern="[A-Za-z]+">
+            </div>
+        </div>  
+        <br>
+        <h4>For office use only</h4>
+        ID
+        <br>
+        <input name="fullname" type="text" size=30 maxlength=30>
+        <br>
+        <br>
+        Receipt number
+        <br>
+        Received mm/dd/yyyy
+        <br>
+        <input name="fullname" type="text" size=30 maxlength=30>
+        <br>
+        <h4>Educational History</h4><p>Please include all educational history, even if the program was not completed. Applications without complete documentation cannot be processed regardless of the date of submission of the application. Official transcripts are required.</p>
+        <h5>High school or GED:</h5>
+        <div id="gridFee">
+            <div id="col1R1">
+                Name of school
+                <br>
+                <input name="fullname" type="text" size=30 maxlength=30 required pattern="[A-Za-z]+">
+            </div>
+            <div id="col2R1">
+                Grade completed
+                <br>
+                <input name="fullname" type="text" size=30 maxlength=30 required>
+            </div>
+            <div id="col3R1">
+                Date
+                <br>
+                <input name="fullname" type="date" size=30 maxlength=30 required>
+            </div>
+        </div>
+
+        <h5>Previous community college, university/or other education: </h5>
+        <div id="gridFee">
+            <div id="col1R1">
+                Name of Institution
+                <br>
+                <input name="fullname" type="text" size=30 maxlength=30 pattern="[A-Za-z]+">
+            </div>
+            <div id="col2R1">
+                Degree/Diploma
+                <br>
+                <input name="fullname" type="text" size=30 maxlength=30 >
+            </div>
+            <div id="col3R1">
+                Year completed
+                <br>
+                <input name="fullname" type="text" size=30 maxlength=30 pattern="[0-9 & - & ].{4}">
+            </div>
+        </div>
+        <br>
+        <div id="gridFee">
+            <div id="col1R1">
+                Name of Institution
+                <br>
+                <input name="fullname" type="text" size=30 maxlength=30>
+            </div>
+            <div id="col2R1">
+                Degree/Diploma
+                <br>
+                <input name="fullname" type="text" size=30 maxlength=30>
+            </div>
+            <div id="col3R1">
+                Year completed
+                <br>
+                <input name="fullname" type="text" size=30 maxlength=30 pattern="[0-9 & - & ].{4}">
+            </div>
+        </div>
+
+        <h4>Health & Human Services Applicants</h4>
+        <div id="gridFee">
+            <div id="col1R1">
+                Have you been convicted of a criminal offence for which you have not recieved a pardon?
+                <br>
+                <input name="offence" type="radio" value="Yes" required>Yes
+                <input name="offence" type="radio" value="no">No
+            </div>
+            <div id="col2R1">
+                Have you been convicted of an offence or investigated for an activity resulting in your name being placed on the Child Abuse Registry?
+                <br>
+                <input name="registry" type="radio" value="Yes" required>Yes
+                <input name="registry" type="radio" value="no">No
+            </div>
+            <div id="col3R1">
+                Have you ever received any  disciplinary actions (including any revocation of your licence to practise) as a member of another health and human service organization?
+                <br>
+                <input name="disciplinary" type="radio" value="Yes" required>Yes
+                <input name="disciplinary" type="radio" value="no">No
+            </div>
+        </div>
+
+        <h4>Self-identification Questionnaire (optional)</h4>
+        <p>NSCC is committed to fostering a diverse college culture and community. Completion of all or part of this  section is voluntary. The information collected may be used by staff and faculty to advise you of services.  It will also be used to assist in assessing and improving student services.</p>
+        <div id="gridFee">
+            <div id="col1R1">
+                Do you self-identify as an Aborginal person?
+                <br>
+                <input name="aboriginal" type="radio" value="Yes">Yes
+                <input name="aboriginal" type="radio" value="no">No
+            </div>
+            <div id="col2R1">
+                Do you self-identify as a member of the African Canadian community? 
+                <br>
+                <input name="AfricanCanadian" type="radio" value="Yes">Yes
+                <input name="AfricanCanadian" type="radio" value="No">No
+            </div>
+            <div id="col3R1">
+                Do you self-identify as a person  with a disability? 
+                <br>
+                <input name="disciplinary" type="radio" value="Yes">Yes
+                <input name="disciplinary" type="radio" value="no">No
+            </div>
+            <div id="col4R1">
+                If you require accommodation, please provide documentation of disability:
+                <br>
+                <input name="accommodation" type="radio" value="enclosed">Enclosed
+                <br>
+                <input name="accommodation" type="radio" value="forward">I will forward it
+                <br>
+                <input name="accommodation" type="radio" value="admission">On file with NSCC Admissions
+            </div>
+        </div>
+        <h4>Additional Information</h4>
+        <textarea rows="6" cols="134"></textarea>
+        <br>
+        <h4>Certification</h4>
+        <p>I understand that it is my responsibility to arrange for the submission of the transcripts and that the application without  complete documentation cannot be considered regardless of submission date. I certify that the foregoing information is  accurate and correct to the best of my knowledge. I understand that the College will collect, use, and disclose my  personal information in a confidential manner that is consistent with the operation of a post-secondary institution.  My consent is conditional upon Nova Scotia Community College complying with their legal duties and obligations  to manage the collection, use, and disclosure of personal information.</p>
+        <div id="gridFee">
+            <div id="col1R1">
+                Applicant Signature
+                <br>
+                <input name="fullname" type="text" size=30 maxlength=30>
+            </div>
+            <div id="col2R1">
+                Date (mm/dd/yyyy)
+                <br>
+                <input name="fullname" type="date">
+            </div>
+        </div>
+        <h4>Permission to Release Personal Information (optional)</h4>
+        <p>Your written permission is required before any personal and financial information, including admission decisions, can be released to a third party. Access to your personal information will only be granted until your first day of classes.</p>
+        <div id="gridFee">
+            <div id="col1R1">
+                <input name="fullname" type="checkbox" size=30 maxlength=30>
+                I hereby give consent to  the release of the information concerning my application  for admission during the  evaluation period to:
+            </div>
+            <div id="col2R1">
+                Name 
+                <br>
+                <input name="fullname" type="text" size=30 maxlength=30 pattern="[A-Za-z]+">
+            </div>
+            <div id="col3R1">
+                Relationship (e.g. Parent, guardian, guidance counsellor, spouse)
+                <br>
+                <input name="fullname" type="text" size=30 maxlength=30 pattern="[A-Za-z]+">
+            </div>
+        </div>
+        <br>
+        <button>Submit</button>
+        <footer>
+            <h4>Further Information</h4>
+            <div id="gridFee">
+                <div id="col1R1">
+                    Forward your completed application form, fee, official transcripts, and any other admission documents to the following address. All submitted documents become the property of NSCC and will not be returned. Your application must be complete before it can be processed and a decision made. 
+                </div>
+                <div id="col2R1">
+                    NSCC Admissions
+                    <br>
+                    P.O. Box 220 
+                    <br>
+                    Halifax, NS  B3J 2M4
+                    <br>
+                    <br>
+                    Questions? Email admissions@nscc.ca  
+                    <br>
+                    or contact us by telephone or fax:
+                </div>
+                <div id="col3R1">
+                    Tel: 902-491-4911  
+                    <br>
+                    Toll free: 1-866-679-6722
+                    <br>
+                    <br>  
+                    Fax: 902-491-3514  
+                    <br>
+                    Toll free fax: 1-866-329-6722
+                    <br><br> 
+                    nscc.ca
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

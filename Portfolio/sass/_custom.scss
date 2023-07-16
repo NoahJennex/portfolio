@@ -1,0 +1,86 @@
+#custom-name-element{
+    div{
+        border: $testingBorderAlt;
+        margin: 0;
+        transform: translate(0%, 66%);
+    }
+}
+
+#pfp{
+    max-height: $elementHeight;
+    max-width: 100%;
+    margin: auto;
+    display: block;
+    border-radius: 180px;
+    border: 6px solid $elementColor;
+    box-shadow: $shadow;
+}
+
+#noahHeader{
+    width: fit-content;
+    background-color: white;
+    border-radius: 25px 25px 0px 0px;
+    padding-left: $elementPadding;
+    padding-right: $elementPadding;
+    box-shadow: $shadow;
+}
+
+#jennexHeader{
+    width: fit-content;
+    background-color: white;
+    border-radius: 0px 25px 25px 25px;
+    padding-left: $elementPadding;
+    padding-right: $elementPadding;
+    box-shadow: $shadow;
+}
+
+#sectionNavbar{
+    border: $testingBorderSections;
+    width: 85%;
+    position:fixed;
+    z-index: 1000;
+    margin-top: 0px;
+    // height: 9hv;
+}
+
+#sectionContent{
+    border: $testingBorderSections;
+    width: 100%;
+    height: fit-content;
+    // margin-top: 20px;
+    margin-bottom: auto;
+    // height: 90hv;
+    // overflow-y: hidden;
+    // overflow-x: hidden;
+
+    // transition: 2s;
+}
+
+#end-div{height: 40px;}
+
+#testing{
+    // border: 5px solid black;
+    // height: fit-content;
+    padding-bottom: $marginTop;
+    width: 85%;
+    margin: auto;
+}
+
+#header{
+    height: 50px;
+}
+
+#cardGame{
+    background-image: url('/Portfolio/Pictures/CardGame2.png');
+}
+#calculator{
+    background-image: url('/Portfolio/Pictures/Calculator.png');
+}
+#calendar{
+    background-image: url('/Portfolio/Pictures/Calendar.png');
+}
+
+#resume{
+    background-image: url('/Portfolio/Pictures/Resume.png');
+    background-position: top center;
+}

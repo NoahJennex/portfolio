@@ -1,0 +1,253 @@
+$darkestBlue : #0D0221;
+$midnightBlue : #0f084b;
+$lightBlue : #26408B;
+
+$fadedBlue : #81acd4;
+$fadedLightBlue : #a6c6d5;
+
+$fadedGreen : #C2E7D9;
+
+$fadedBrown : #ebe6dd;
+
+$fadedBlack : rgb(24, 24, 24);
+$fadedGray : rgb(56, 56, 56);
+$fadedLightGray : rgb(66, 66, 66);
+
+
+
+body{
+    // background-color: rgb(33, 33, 36);
+    // background-color: $fadedBrown;
+    background-color: #f8f9fa;
+  }
+  
+  //*hand 3
+  #grid-item-2{
+    transform: rotate(180deg);
+    z-index: 5;
+  }
+  //*hand 2
+  #grid-item-4{
+    transform: rotate(90deg);
+    z-index: 5;
+  }
+  //*hand 4
+  #grid-item-6{
+    transform: rotate(-90deg);
+    z-index: 5;
+  }
+  //*hand 1
+  #grid-item-8{
+    z-index: 5;
+  }
+
+  //*corners
+  #grid-item-1{
+    z-index: 4;
+  }
+  #grid-item-3{
+    z-index: 4;
+  }
+  #grid-item-7{
+    z-index: 4;
+  }
+  #grid-item-9{
+    z-index: 4;
+  }
+  
+  #center{
+    //  background-color: black;
+  
+    height: 145px;
+    width: 230px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #deck1:hover, #pile1:hover{
+    transform: scale(1.01);
+  }
+  
+  .handDiv{
+    z-index: 5;
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #grid-item-center{
+    transition: all 0.75s linear;
+    z-index: 6;
+  }
+  
+  #tableInner{
+    transition: all 0.75s linear;
+  }
+  #tableOuter{
+    overflow: hidden;
+  }
+  
+  
+  #deck1:hover, #pile1:hover {
+    transform: scale(1.1);
+  }
+  
+  .grid-container-center{
+    display: grid;
+    grid-template-columns: auto auto;
+    // border: solid 2px black;
+  }
+  
+  .grid-container-board {
+    // border: 1px solid rgba(0, 0, 0, 0.8);
+    // background-color: #2196F3;
+  
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 0;
+    row-gap: 0;
+    position: relative;
+    width: 70%;
+    max-width: 900px;
+    max-height: 900px;
+    margin: auto;
+      
+  }
+  .grid-item-board {
+    // background-color: rgba(255, 255, 255, 0.8);
+    // border: 1px solid rgba(0, 0, 0, 0.8);
+  
+    max-height: 300px;
+    height: 0;
+    max-width: 300px;
+    display: block;
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+  }
+
+  // NEW
+
+  .centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .checkbox{
+    margin: 0;
+    margin-right: 3px;
+    width: fit-content;
+    position: relative;
+  }
+
+
+  input[type="radio"]{
+    display: none;
+  }
+   input[type="radio"]:checked + label {
+    background-color: $fadedBlue;
+    opacity: 100%;
+    
+  }
+  label{
+    vertical-align:middle;
+    padding: 5px;
+    border-radius: 5px;
+    width: fit-content;
+    background-color: $fadedBlue;
+
+    font-size: large;
+    opacity: 40%;
+  }
+  label:hover{
+    transform: scale(1.05);
+    background-color: $fadedLightBlue;
+  }
+  
+
+  .headerDiv{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    // background-color: rgb(33, 33, 36);
+    background-color: $fadedGray;
+    // margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    font-size: large;
+  }
+
+  .button{
+    display: block;
+    width: fit-content;
+    padding: 5px;
+    line-height: fit-content;
+    border: transparent;
+    border-radius: 5px;
+  }
+  .button:hover{
+    // transform: scale(1.05);
+    opacity: 60%;
+  }
+
+  .grid-container-playerCheckbox{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: auto;
+    // row-gap: 50%;
+    // margin: 10px;
+  }
+
+  .menu{
+    background-color: $fadedBlack;
+    width: fit-content;
+    // padding: 20px;
+    padding: auto;
+  }
+
+  .nameDiv{
+    position: relative;
+    z-index: 6;
+    background-color: $fadedBlack;
+    border-radius: 25px;
+
+    margin: auto;
+    top: -15px;
+    padding: 4px;
+    // padding-left: 15px;
+    width: fit-content;
+    min-width: 100px;
+
+    color: white;
+    text-align: center;
+  }
+  
+
+  label{
+    // display: inline;
+    vertical-align:middle;
+    padding: 5px;
+    // border: 1px solid black;
+    border-radius: 5px;
+    width: fit-content;
+    background-color: $fadedBlue;
+    // margin: auto;
+
+    font-size: large;
+    // opacity: 40%;
+  }
+  // label:checked{
+  //   opacity: 100%;
+  // }
+  label:hover{
+    transform: scale(1.05);
+    background-color: $fadedLightBlue;
+  }
+  
